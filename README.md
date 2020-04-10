@@ -4,7 +4,7 @@
 ## install:
 You need to have [`Go`](https://golang.org/) installed in your system. Then clone the repo and run:
 ```
-go install 
+go install .
 ```
 This will build the binary in `$GOPATH/bin` directory. 
 
@@ -28,16 +28,16 @@ $GOPATH/bin/goget google.com
 
 ### Example
 ```
-./goget -parallel 3 adjust.com google.com facebook.com yahoo.com yandex.com twitter.com reddit.com/r/funny reddit.com/r/notfunny baroquemusiclibrary.com 
+$GOPATH/bin/goget -parallel 3 adjust.com google.com facebook.com yahoo.com yandex.com twitter.com reddit.com/r/funny reddit.com/r/notfunny baroquemusiclibrary.com 
 
 # outputs
-http://google.com 44d7b8035b5c796c40f48653fffddff5
+http://google.com 010c6ccacb2c948ef2842a86c0e56447
 http://adjust.com 51b0f83c5612591d00f6912559498652
-http://facebook.com 7ea781b0a3701721dc41fcaba595f83e
-http://yandex.com 2a53c33ad8baac0274128ee3b6959e04
-http://twitter.com 6fea0869722ebfb7ca023056feda4c7b
-http://yahoo.com 996e7f8f517b00eacdfd835f92ed9b38
-http://reddit.com/r/funny f420bfd1d3947253488698662af15cf7
-http://reddit.com/r/notfunny 977f46e7e5f8892160a116626d310b3b
-http://baroquemusiclibrary.com 90ae3b48812f3a109715ac1224e7125d
+http://facebook.com d9cd5022f1ba405b50a6cce0b0806728
+http://yandex.com 8af81f08500b3a5cc234cf5933c28f50
+http://twitter.com e4afe711b20950599e5c48eedab11d6d
+http://reddit.com/r/funny e3df1e9b50c1a3391ec8553e7a292a07
+http://yahoo.com 927ca1fe09a7478039729d177c85c58a
+http://reddit.com/r/notfunny 84cd2f402466be4bf9d2d685cbcd88ef
+http://baroquemusiclibrary.com 24d185566c069eb686b31b81a6253515
 ```
