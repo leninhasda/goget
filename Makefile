@@ -1,5 +1,5 @@
-build:  test
-	go build -o goget .
+build: test
+	go build -o ./dist/goget .
 
 test:
 	go test -v ./...
