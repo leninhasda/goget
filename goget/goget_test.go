@@ -1,7 +1,6 @@
 package goget
 
 import (
-	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -11,7 +10,7 @@ func Test_GetMd5Hash(t *testing.T) {
 	getter := New(http.DefaultClient)
 
 	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "Hello, client")
+		w.Write([]byte("Hello, client"))
 	}))
 	defer ts.Close()
 
@@ -19,7 +18,7 @@ func Test_GetMd5Hash(t *testing.T) {
 	if err != nil {
 		t.Errorf("error: %s", err.Error())
 	}
-	if md5 != "d32da7152864375f6fb7fce78877a98c" {
-		t.Errorf("test failed: expected d32da7152864375f6fb7fce78877a98c, got %s", md5)
+	if md5 != "b819c21b48cb2fa83e9ec2be9630ae9f" {
+		t.Errorf("test failed: expected b819c21b48cb2fa83e9ec2be9630ae9f, got %s", md5)
 	}
 }

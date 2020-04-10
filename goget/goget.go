@@ -36,6 +36,6 @@ func (g *getter) GetMd5Hash(url string) (string, error) {
 		return "", err
 	}
 
-	md5 := md5.Sum(body)
-	return hex.EncodeToString(md5[:]), nil
+	hash := md5.Sum(body)
+	return hex.EncodeToString(hash[:]), nil
 }
