@@ -1,0 +1,7 @@
+# goget
+
+what:
+
+install:
+
+usage:
